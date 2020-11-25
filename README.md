@@ -38,9 +38,20 @@ A successful example
 	client_id: "c_1234567890"
 	message: "Authorization has been completed successfully."
 	scope: ["VIEW_PROFILE"]
-	userInfo: { ... }
 	state: undefined
 	type: "success"
+	userInfo: {
+		avatar: "https://uploads.tikapi.io/avatars/c8f3f02070fc613e0b663b2d33b366f9.jpeg?v=1606338347"
+		birthday: ""
+		followers_count: 0
+		followings_count: 0
+		gender: 0
+		id: "6845742198232105989"
+		nickname: "user9155470419087"
+		sec_user_id: "MS4wLjABAAAA77cXhkB15fV7rqAAMI0zGK_R1OaW8NjnVoO8ZIg8qfUm0d_XUs31QqEql3WVsDc8"
+		user_verified: false
+		username: "demoapi"
+	}
 }
 ```
 
