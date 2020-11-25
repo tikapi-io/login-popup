@@ -1,5 +1,5 @@
 "use strict";
-const TikApi = new function(){
+window.TikApi = new function(){
 	const config = {
 		OAUTH_URL: 'https://tikapi.io/account/authorize',
 		available_scopes:['VIEW_PROFILE','FOLLOW_ACTIONS','MEDIA_ACTIONS','SEARCH']
