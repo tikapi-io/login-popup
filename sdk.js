@@ -70,10 +70,6 @@ window.TikApi = new function(){
 
 	//Oauth Event Function Setter
 	this.onLogin = function(callback){
-		if(typeof callback !== "function"){
-			alert("Invalid callback for onLogin.");
-			throw new Error("Invalid callback for onLogin.");
-		}
 		this.loginEvent = callback;
 	}
 
