@@ -1,6 +1,7 @@
 # TikAPI OAuth Popup
 
 The authorization process is done through browser events, and the events are posted directly on your website.
+<p align="center"><img src="https://i.imgur.com/JS1dycX.gif"></p>
 
 ##  Setup
 Firstly, include the [Popup script](https://tikapi.io/assets/js/popup.js) before the end of the html body.
