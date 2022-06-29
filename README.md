@@ -1,32 +1,24 @@
-# TikApi Login Javascript SDK
-Once someone has clicked the Login button, and accepted the login dialog — completing the login flow — your app is given access to that account, you can use the access token to make API calls for that account.
+# TikAPI OAuth Popup
+
+The authorization process is done through browser events, and the events are posted directly on your website.
 
 ##  Setup
-
-Firstly, include the [tikapi sdk script](https://tikapi.io/assets/js/sdk.js) before the end of the html body.
+Firstly, include the [Popup script](https://tikapi.io/assets/js/popup.js) before the end of the html body.
 ```html
-<script src="https://tikapi.io/assets/js/sdk.js"></script>
+<script src="https://tikapi.io/assets/js/popup.js"></script>
 ```
 
-To display the login button you must add an element with class `tikapi` and you must set the `data-client_id` attribute (You can find your client id at [Developer Settings](https://tikapi.io/developer/settings)).
-
-
-```html
-<button class="tikapi" data-client_id="c_1234567890" data-scope="VIEW_PROFILE">
-</button>
-```
-
-Or you can open the OAuth window directly by calling the function like this,
+You can open the OAuth window by calling the function like this:
 ```javascript
-TikApi.oauth({
+TikAPI.popup({
 	client_id: "c_1234567890",
-	scope: 'VIEW_PROFILE',
+	//scope: ['VIEW_PROFILE', 'USER_MESSAGES'], (optional)
 });
 ```
 
 Now you're all set, you can now listen to user login events and get the user info like this
 ```javascript
-TikApi.onLogin(function(data){
+TikAPI.onLogin(function(data){
 	console.log(data);
 });
 ```
