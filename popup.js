@@ -16,12 +16,14 @@ window.TikAPI = new function(){
 		options = (options.constructor.name === "Object" || !(arguments.length > 1)) ?  {
 			client_id: options.client_id,
 			scope: options.scope,
-			url: arguments[2]
+			url: options.url
 		} : {
 			client_id: arguments[0],
 			scope: arguments[1],
-			url: e.url
+			url: arguments[2]
 		};
+
+	
 	
 		options.client_id = function(client){
 			if(!/^c_[a-zA-Z0-9]{10,}$/.test(client)){
@@ -67,7 +69,7 @@ window.TikAPI = new function(){
 			}
 			urlQuery.append(option,options[option]);
 		}
-	
+
 		var url = `${options.url || config.OAUTH_URL}?${urlQuery.toString()}`;
 		var left = (window.screen.width/2)-(500/2);
 		var top = (window.screen.height/2)-(500/2);
@@ -75,6 +77,9 @@ window.TikAPI = new function(){
 	
 		return url;
 	}
+
+	//alias
+	this.oauth = this.popup;
 
 	//Oauth Event Function Setter
 	this.onLogin = function(callback){
