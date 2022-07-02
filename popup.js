@@ -15,15 +15,19 @@ window.TikAPI = new function(){
 
 		options = (options.constructor.name === "Object" || !(arguments.length > 1)) ?  {
 			client_id: options.client_id,
-			scope: options.scope,
+			scopes: options.scopes,
+			state: options.state,
+			email: options.email,
+			country: options.country,
 			url: options.url
 		} : {
 			client_id: arguments[0],
-			scope: arguments[1],
-			url: arguments[2]
+			scopes: arguments[1],
+			state: arguments[2],
+			email: arguments[3],
+			country: arguments[4],
+			url: arguments[5]
 		};
-
-	
 	
 		options.client_id = function(client){
 			if(!/^c_[a-zA-Z0-9]{10,}$/.test(client)){
@@ -32,7 +36,7 @@ window.TikAPI = new function(){
 			return client;
 		}(options.client_id);
 	
-		options.scope = function(scopes){
+		options.scopes = function(scopes){
 			if(!scopes || scopes == ""){
 				return false;
 			}
@@ -57,7 +61,7 @@ window.TikAPI = new function(){
 			}
 			return validScopes;
 		
-		}(options.scope);
+		}(options.scopes);
 		
 		options.is_popup = true;
 
