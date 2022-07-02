@@ -15,7 +15,7 @@ window.TikAPI = new function(){
 
 		options = (options.constructor.name === "Object" || !(arguments.length > 1)) ?  {
 			client_id: options.client_id,
-			scopes: options.scopes,
+			scopes: options.scopes || options.scope,
 			state: options.state,
 			email: options.email,
 			country: options.country,
