@@ -77,7 +77,7 @@ window.TikAPI = new function(){
 		var url = `${options.url || config.OAUTH_URL}?${urlQuery.toString()}`;
 		var left = (window.screen.width/2)-(500/2);
 		var top = (window.screen.height/2)-(500/2);
-		var child = window.open(url,"Login with TikTok",`toolbar=no, width=500, height=500, top=${top}, left=${left}`);
+		var child = window.open(url,"Login with TikTok",`toolbar=no, width=500, height=720, top=${top}, left=${left}`);
 	
 		return url;
 	}
