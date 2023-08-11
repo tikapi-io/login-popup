@@ -2,7 +2,7 @@
 window.TikAPI = new function(){
 	const config = {
 		OAUTH_URL: 'https://tikapi.io/account/authorize',
-		available_scopes:['VIEW_PROFILE','FOLLOW_ACTIONS','MEDIA_ACTIONS','VIEW_MESSAGES','EDIT_PROFILE', 'SEARCH', 'SEND_MESSAGES', 'LIVE']
+		available_scopes: ["CONVERSATION_REQUESTS","EDIT_PROFILE","EXPLORE","FOLLOW_ACTIONS","LIVE","MEDIA_ACTIONS","SEND_MESSAGES","VIEW_ANALYTICS","VIEW_COINS","VIEW_COLLECTIONS","VIEW_FOLLOWERS","VIEW_MESSAGES","VIEW_NOTIFICATIONS","VIEW_PROFILE"]
 	};
 
 	this.callback = null;
