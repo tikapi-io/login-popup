@@ -59,7 +59,7 @@ window.TikAPI = new function(){
 				alert("Some scopes are invalid.")
 				throw new Error("Some scopes are invalid");
 			}
-			return validScopes;
+			return validScopes.join('+');
 		
 		}(options.scope);
 		
